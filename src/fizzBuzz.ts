@@ -1,4 +1,4 @@
-export const fizzBuss = (size: number): any => {
+export const fizzBuzz = (size: number): any => {
   const response = []
 
   for (let i = 1; i <= size; i++) {
