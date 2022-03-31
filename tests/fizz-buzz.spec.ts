@@ -4,6 +4,7 @@ const fizzBuss = (size: number): any => {
   for (let i = 1; i <= size; i++) {
     let content = i.toString()
     if (i % 3 === 0) { content = 'Fizz' }
+    if (i % 5 === 0) { content = 'Buzz' }
 
     response.push(content)
   }
@@ -22,5 +23,11 @@ describe('Fizz Buss Spec', () => {
     const result = fizzBuss(3)
 
     expect(result).toEqual(['1', '2', 'Fizz'])
+  })
+
+  test('Check if multiples of 5 return "Fizz" word', () => {
+    const result = fizzBuss(5)
+
+    expect(result).toEqual(['1', '2', 'Fizz', '4', 'Buzz'])
   })
 })
