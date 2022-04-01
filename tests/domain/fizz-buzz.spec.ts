@@ -1,4 +1,4 @@
-import { fizzBuzz } from '@/fizzBuzz'
+import { fizzBuzz } from '@/domain'
 
 describe('Fizz Buss Spec', () => {
   test('Call function with a correct params', () => {
