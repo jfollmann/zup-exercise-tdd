@@ -60,6 +60,12 @@ describe('Roman Numbers Spec', () => {
     expect(result).toEqual('V')
   })
 
+  test('should return VII if input is 7', () => {
+    const result = convertToRoman(7)
+
+    expect(result).toEqual('VII')
+  })
+
   test('should return IX if input is 9', () => {
     const result = convertToRoman(9)
 
