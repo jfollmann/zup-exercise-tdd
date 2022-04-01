@@ -1,6 +1,6 @@
 # **ZUP - Exercício proposto de TDD**
 
-[![Coverage Status](https://coveralls.io/repos/github/jfollmann/zup-exercise-tdd/badge.svg?branch=feature/coveralls)](https://coveralls.io/github/jfollmann/zup-exercise-tdd?branch=feature/coveralls)
+[![Coverage Status](https://coveralls.io/repos/github/jfollmann/zup-exercise-tdd/badge.svg?branch=feature/coveralls)](https://coveralls.io/github/jfollmann/zup-exercise-tdd?branch=main)
 
 ## Exercícios
 
