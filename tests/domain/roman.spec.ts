@@ -1,9 +1,24 @@
+type RomanNumbersType = { key: string, value: number }
+
 const convertToRoman = (value: number): string => {
   if (value === undefined) {
     throw new Error('Invalid value')
   }
 
-  if (value <= 3) { return 'I'.repeat(value) } else return 'IV'
+  const map: RomanNumbersType[] = [
+    { key: 'IV', value: 4 },
+    { key: 'I', value: 1 }
+  ]
+
+  let result = ''
+  map.forEach(({ key, value: mapValue }) => {
+    const floor = Math.floor(value / mapValue)
+
+    result += key.repeat(floor)
+    value = value % mapValue
+  })
+
+  return result
 }
 
 describe('Roman Numbers Spec', () => {
