@@ -10,7 +10,7 @@ describe('Fizz Buss Spec', () => {
   test('Call function without size throw error', () => {
     const fn = fizzBuzz
 
-    expect(() => fn(undefined as any)).toThrow(new Error())
+    expect(() => fn(undefined as any)).toThrow(new Error('Invalid size'))
   })
 
   test('Check if multiples of 3 return "Fizz" word', () => {

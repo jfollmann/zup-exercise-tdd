@@ -1,6 +1,6 @@
 export const fizzBuzz = (size: number): any => {
   if (size === undefined) {
-    throw new Error('')
+    throw new Error('Invalid size')
   }
 
   const result = Array.from({ length: size + 1 }, (_, i) => {
