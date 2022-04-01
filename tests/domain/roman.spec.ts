@@ -6,6 +6,14 @@ const convertToRoman = (value: number): string => {
   }
 
   const map: RomanNumbers[] = [
+    { key: 'M', value: 1000 },
+    { key: 'CM', value: 900 },
+    { key: 'D', value: 500 },
+    { key: 'CD', value: 400 },
+    { key: 'C', value: 100 },
+    { key: 'XC', value: 90 },
+    { key: 'L', value: 50 },
+    { key: 'XL', value: 40 },
     { key: 'X', value: 10 },
     { key: 'IX', value: 9 },
     { key: 'V', value: 5 },
@@ -85,9 +93,34 @@ describe('Roman Numbers Spec', () => {
     expect(result).toEqual('XIII')
   })
 
-  test.todo('should return XXI if input is 21')
-  test.todo('should return L if input is 50')
-  test.todo('should return C if input is 100')
-  test.todo('should return D if input is 500')
-  test.todo('should return M if input is 1000')
+  test('should return XXI if input is 21', () => {
+    const result = convertToRoman(21)
+
+    expect(result).toEqual('XXI')
+  })
+
+  test('should return L if input is 50', () => {
+    const result = convertToRoman(50)
+    expect(result).toEqual('L')
+  })
+
+  test('should return L if input is 89', () => {
+    const result = convertToRoman(89)
+    expect(result).toEqual('LXXXIX')
+  })
+
+  test('should return C if input is 100', () => {
+    const result = convertToRoman(100)
+    expect(result).toEqual('C')
+  })
+
+  test('should return D if input is 500', () => {
+    const result = convertToRoman(500)
+    expect(result).toEqual('D')
+  })
+
+  test('should return M if input is 1000', () => {
+    const result = convertToRoman(1000)
+    expect(result).toEqual('M')
+  })
 })
