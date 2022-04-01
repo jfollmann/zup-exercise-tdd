@@ -1,12 +1,56 @@
-# ZUP - Exercício proposto de TDD
+# **ZUP - Exercício proposto de TDD**
 
-## FizzBuzz
-Escreva uma função que retorno um array com números entre 1 e N.
+## Exercícios
 
-Multiplos de 3 usar a palavra Fizz
-
-Multiplos de 5 usar a palavra Buzz
-
-Multiplos de 3 e 5 usar a palavra FizzBuzz
-
+### FizzBuzz
+- Escreva uma função que retorno um array com números entre 1 e N.
+- Multiplos de 3 usar a palavra Fizz
+- Multiplos de 5 usar a palavra Buzz
+- Multiplos de 3 e 5 usar a palavra FizzBuzz
 ["1", "2", "Fizz", "4", "Buzz", ...]
+
+### Número Romano
+Implemente o método String convert(int) que recebe um número e o converte para algarismo romanos.
+``` 
+	1 -> I
+	2 -> II
+	3 -> III
+	4 -> IV
+	5 -> V
+	9 -> IX
+	21 -> XXI
+	50 -> L
+	100 -> C
+	500 -> D
+	1000 -> M
+```
+
+## Rodando a aplicação (desenvolvimento)
+
+Para rodar a aplicação em desenvolvimento, primeiro precisamos instalar as dependências:
+
+```bash
+$ npm ci
+```
+
+Em seguida, executar o build:
+
+```bash
+$ npm run build
+```
+
+Após isso:
+
+```bash
+$ npm run start
+```
+
+## Executando os testes
+
+```bash
+$ npm run test
+```
+ou
+```bash
+$ npm run test:coverage
+```
