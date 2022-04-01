@@ -6,6 +6,7 @@ const convertToRoman = (value: number): string => {
   }
 
   const map: RomanNumbers[] = [
+    { key: 'IX', value: 9 },
     { key: 'V', value: 5 },
     { key: 'IV', value: 4 },
     { key: 'I', value: 1 }
@@ -58,7 +59,12 @@ describe('Roman Numbers Spec', () => {
 
     expect(result).toEqual('V')
   })
-  test.todo('should return IX if input is 9')
+
+  test('should return IX if input is 9', () => {
+    const result = convertToRoman(9)
+
+    expect(result).toEqual('IX')
+  })
   test.todo('should return X if input is 10')
   test.todo('should return XXI if input is 21')
   test.todo('should return L if input is 50')
