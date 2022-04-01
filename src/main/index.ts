@@ -2,7 +2,8 @@ import './config/module-alias'
 
 import { fizzBuzz } from '@/domain'
 
-console.log('-- FizzBuzz --')
-console.log({ input: 10, output: fizzBuzz(10) })
-console.log({ input: 20, output: fizzBuzz(20) })
-console.log({ input: 30, output: fizzBuzz(30) })
+console.log('---- FizzBuzz ----')
+const itens = [10, 20, 30]
+itens.forEach(input => {
+  console.log({ input, output: fizzBuzz(input) })
+})
