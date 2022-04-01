@@ -1,5 +1,6 @@
 # **ZUP - Exercício proposto de TDD**
 
+[![CI](https://github.com/jfollmann/zup-exercise-tdd/actions/workflows/ci.yml/badge.svg)](https://github.com/jfollmann/zup-exercise-tdd/actions/workflows/ci.yml)
 [![Coverage Status](https://coveralls.io/repos/github/jfollmann/zup-exercise-tdd/badge.svg?branch=main)](https://coveralls.io/github/jfollmann/zup-exercise-tdd?branch=main)
 
 ## Exercícios
