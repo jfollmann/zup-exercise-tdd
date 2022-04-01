@@ -12,7 +12,6 @@
     "test:watch": "npm t -- --watch",
     "test:staged": "npm t -- --findRelatedTests",
     "test:coverage": "npm t -- --coverage",
-    "test:coveralls": "npm t -- --coverage && coveralls < coverage/lcov.info",
     "prepare": "husky install"
   },
   "keywords": [],
