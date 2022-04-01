@@ -3,7 +3,7 @@ const convertToRoman = (value: number): string => {
     throw new Error('Invalid value')
   }
 
-  return 'I'.repeat(value)
+  if (value <= 3) { return 'I'.repeat(value) } else return 'IV'
 }
 
 describe('Roman Numbers Spec', () => {
@@ -23,5 +23,11 @@ describe('Roman Numbers Spec', () => {
     const result = convertToRoman(3)
 
     expect(result).toEqual('III')
+  })
+
+  test('Call with 4 and return IV', () => {
+    const result = convertToRoman(4)
+
+    expect(result).toEqual('IV')
   })
 })
