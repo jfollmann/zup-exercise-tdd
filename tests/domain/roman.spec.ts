@@ -1,11 +1,11 @@
-type RomanNumbersType = { key: string, value: number }
+type RomanNumbers = { key: string, value: number }
 
 const convertToRoman = (value: number): string => {
   if (value === undefined) {
     throw new Error('Invalid value')
   }
 
-  const map: RomanNumbersType[] = [
+  const map: RomanNumbers[] = [
     { key: 'IV', value: 4 },
     { key: 'I', value: 1 }
   ]
@@ -22,25 +22,31 @@ const convertToRoman = (value: number): string => {
 }
 
 describe('Roman Numbers Spec', () => {
-  test('Call function with correct params', () => {
-    const result = convertToRoman(1)
-
-    expect(result).toEqual('I')
-  })
-
-  test('Call function without value throw error', () => {
+  test('should return throw if input is invalid', () => {
     const fn = convertToRoman
 
     expect(() => fn(undefined as any)).toThrow(new Error('Invalid value'))
   })
 
-  test('Call with 3 and return III', () => {
+  test('should return I if input is 1', () => {
+    const result = convertToRoman(1)
+
+    expect(result).toEqual('I')
+  })
+
+  test('should return II if input is 2', () => {
+    const result = convertToRoman(2)
+
+    expect(result).toEqual('II')
+  })
+
+  test('should return III if input is 3', () => {
     const result = convertToRoman(3)
 
     expect(result).toEqual('III')
   })
 
-  test('Call with 4 and return IV', () => {
+  test('should return IV if input is 4', () => {
     const result = convertToRoman(4)
 
     expect(result).toEqual('IV')
