@@ -1,25 +1,25 @@
 import { fizzBuzz } from '@/domain'
 
 describe('Fizz Buss Spec', () => {
-  test('Call function with a correct params', () => {
-    const result = fizzBuzz(0)
-
-    expect(result).toEqual([])
-  })
-
-  test('Call function without size throw error', () => {
+  test('should return throw if input is invalid', () => {
     const fn = fizzBuzz
 
     expect(() => fn(undefined as any)).toThrow(new Error('Invalid size'))
   })
 
-  test('Check if multiples of 3 return "Fizz" word', () => {
+  test('should return empty array if input is 0', () => {
+    const result = fizzBuzz(0)
+
+    expect(result).toEqual([])
+  })
+
+  test('should return "Fizz" if number is multiple of 3', () => {
     const result = fizzBuzz(3)
 
     expect(result).toEqual(['1', '2', 'Fizz'])
   })
 
-  test('Check if multiples of 5 return "Buzz" word', () => {
+  test('should return "Buzz" if number is multiple of 5', () => {
     const result = fizzBuzz(5)
 
     expect(result).toEqual([
@@ -28,7 +28,7 @@ describe('Fizz Buss Spec', () => {
     ])
   })
 
-  test('Check if multiples of 3 and 5 return "FizzBuzz" word', () => {
+  test('should return "FizzBuzz" if number is multiple of 3 and 5', () => {
     const result = fizzBuzz(15)
 
     expect(result).toEqual([
@@ -39,7 +39,7 @@ describe('Fizz Buss Spec', () => {
       '13', '14', 'FizzBuzz'])
   })
 
-  test('Check if result is correct', () => {
+  test('should return a correct output if input is 30', () => {
     const result = fizzBuzz(30)
 
     expect(result).toEqual([
