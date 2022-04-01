@@ -1,4 +1,4 @@
-export const fizzBuzz = (size: number): any => {
+export const fizzBuzz = (size: number): string[] => {
   if (size === undefined) {
     throw new Error('Invalid size')
   }
