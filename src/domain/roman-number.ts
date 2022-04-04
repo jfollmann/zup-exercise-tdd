@@ -21,13 +21,11 @@ export const convertToRoman = (value: number): string => {
     { key: 'I', value: 1 }
   ]
 
-  let result = ''
-  map.forEach(({ key, value: mapValue }) => {
+  return map.reduce((prev, next) => {
+    const { key, value: mapValue } = next
     const floor = Math.floor(value / mapValue)
 
-    result += key.repeat(floor)
     value = value % mapValue
-  })
-
-  return result
+    return prev + key.repeat(floor)
+  }, '')
 }
