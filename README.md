@@ -30,7 +30,7 @@ Implemente o método String convert(int) que recebe um número e o converte para
 1000 -> M
 ```
 
-## Rodando a aplicação (desenvolvimento)
+## Rodando a aplicação
 
 Para rodar a aplicação em desenvolvimento, primeiro precisamos instalar as dependências:
 
